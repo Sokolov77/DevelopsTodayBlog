@@ -10,7 +10,7 @@ const PostsList = ({
 }: PostListPropsType) => {
   return (
     <div>
-      <ul onClick={(e) => handleRemove(+e.target.dataset.id)}>
+      <ul onClick={(e:any) => handleRemove(+e.target.dataset.id)}>
         {data.length ? (
           data.map((post) => {
             return (
