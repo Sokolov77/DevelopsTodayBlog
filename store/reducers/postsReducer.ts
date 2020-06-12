@@ -27,7 +27,7 @@ export type PostInitialStateType = typeof initialState;
 
 const postsReducer = (
   state: PostInitialStateType = initialState,
-  action: PostsActionTypes
+  action: PostsActionTypes,
 ) => {
   switch (action.type) {
     case GET_ALL_POST_SUCCESS:
@@ -38,7 +38,7 @@ const postsReducer = (
     case GET_ALL_POST_FAILURE:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
 
     case CREATE_POST_REQUEST:
@@ -55,7 +55,7 @@ const postsReducer = (
       return {
         ...state,
         loading: false,
-        error: action.payload
+        error: action.payload,
       };
     case REMOVE_POST_REQUEST:
       return {
@@ -72,7 +72,7 @@ const postsReducer = (
       return {
         ...state,
         loading: false,
-        error: action.payload
+        error: action.payload,
       };
     case GET_POST_SUCCESS:
       return {
@@ -82,7 +82,7 @@ const postsReducer = (
     case GET_POST_FAILURE:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     case CREATE_COMMENT_REQUEST:
       return {
@@ -95,7 +95,7 @@ const postsReducer = (
     case CREATE_COMMENT_FAILURE:
       return {
         ...state,
-        error: action.payloadK
+        error: action.payload,
       };
     default:
       return state;
